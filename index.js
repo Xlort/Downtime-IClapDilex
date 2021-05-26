@@ -10,7 +10,7 @@ app.get('/script.js', (req, res) => {
 })
 
 app.use((req, res) => {
-    return res.status(503).sendFile(path.join(__dirname, './index.html'))
+    return res.status(200).sendFile(path.join(__dirname, './index.html'))
 })
 
 app.listen(process.env.PORT || 80)
