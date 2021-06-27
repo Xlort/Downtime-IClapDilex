@@ -1,3 +1,7 @@
 # Downtime-IClapDilex
 
-# OPEN SOURCE Downtime Website for IClapDilex Self Bot
+## Open Source Downtime Website for IClapDilex Self Bot
+
+---
+
+Feel free to use this in your website.
