@@ -1,4 +1,4 @@
-var countdownDate = new Date("May 11, 2021 22:30:00").getTime();
+var countdownDate = new Date("July 12, 2021 20:30:00").getTime();
 
 var interval = setInterval(() => {
     var now = new Date().getTime();
