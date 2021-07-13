@@ -4,48 +4,124 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images-ext-2.discordapp.net/external/X9VyeAbAkH_TwJBErMwRbyfrKXgLovSTfpBr_P8ZGq0/https/iclapdilexselfbot.herokuapp.com/cdn/Services/General/img/IClapDilexSelfBot-Icon-83x86.png" alt="IClapDilex Self Bot">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Undergoing maintenance</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+        :root {
+            --primary-color: #3a4052;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .showcase {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .video-container:after {
+            content: '';
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+
+        .content {
+            z-index: 10;
+        }
+
+        .fade-in {
+            animation: fadeIn 6s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
   </head>
-  <body style="padding-top: 50px" class="d-flex flex-column h-100">
-    <div class="flex-shrink-0 container-fluid mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="mb-3 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <img class="card-img-top rounded-circle" src="/logo.png" style="border-radius: 20px;">
-                            <h3 class="card-text">IClapDilex Self Bot is currently experiencing technical issues!</h3>
-                            <hr>
-                            <div>
-                                <h4>Estimated time left</h4>
-                                <div class="form-inline">
-                                    <h4 id="hours" class="mr-2"></h4>
-                                    <h4 id="minutes" class="mr-2"></h4>
-                                    <h4 id="seconds" class="mr-2"></h4>
-                                    <h4 id="end"></h4>
-                                </div>
-                            </div>
-                            <hr>
-                            Join our <a href="https://discord.com/invite/KbtDWMrYGa">Discord server</a> for updates!
-                        </div>
-                    </div>
-                </div>
+  <body class="bg-dark">
+      <div class="showcase" id="before">
+        <button id="okstart" class="btn btn-primary">Get in queue!🙃</button>
+      </div>
+      <section class="showcase" hidden id="start">
+          <div class="video-container">
+            <video src="/video.mp4" autoplay muted loop></video>
+            <audio id="audio" src="/video.mp4" loop></audio>
+          </div>
+          <div class="content fade-in" hidden id="content">
+            <h1><strong>ZVNFN</strong> is launching soon!</h1>
+            <hr>
+            <div>
+              <h3 id="days" class="mr-2"></h3>
+              <h3 id="hours" class="mr-2"></h3>
+              <h3 id="minutes" class="mr-2"></h3>
+              <h3 id="seconds" class="mr-2"></h3>
+              <h3 id="end" class="mr-2"></h3>
+              <a href="https://discord.gg/KbtDWMrYGa">Join our discord server for more information!</a>
             </div>
-         </div>
-    </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </div>
+    </section>
     <script src="/script.js"></script>
     </body>
 </html>
