@@ -1,9 +1,11 @@
 document.getElementById('okstart').onclick = () => {
     document.getElementById('video').onplaying = () => {
         document.getElementById('audio').play();
-        setTimeout(() => {
-            document.getElementById('content').removeAttribute('hidden');
-        }, 6000)
+        document.getElementById('audio').onplaying = () => {
+            setTimeout(() => {
+                document.getElementById('content').removeAttribute('hidden');
+            }, 6000)
+        }
     }
 
     document.getElementById('before').setAttribute('hidden', 'hidden');
