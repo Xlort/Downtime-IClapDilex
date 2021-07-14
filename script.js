@@ -1,15 +1,13 @@
 document.getElementById('okstart').onclick = () => {
     document.getElementById('video').onplaying = () => {
-        document.getElementById('audio').play();
-        document.getElementById('audio').onplaying = () => {
-            setTimeout(() => {
-                document.getElementById('content').removeAttribute('hidden');
-            }, 6000)
-        }
+        setTimeout(() => {
+            document.getElementById('content').removeAttribute('hidden');
+        }, 6000)
     }
 
     document.getElementById('before').setAttribute('hidden', 'hidden');
     document.getElementById('start').removeAttribute('hidden');
+    document.getElementById('video').play();
 
     var countdownDate = 'August 24 2021 20:30:00 GMT+0300';
 
