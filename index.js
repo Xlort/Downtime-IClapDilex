@@ -17,4 +17,6 @@ app.use((req, res) => {
     return res.status(200).sendFile(path.join(__dirname, './index.html'))
 })
 
-app.listen(process.env.PORT || 80)
+app.listen(process.env.PORT || 80, () => {
+    console.log('Started')
+})
