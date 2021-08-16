@@ -19,13 +19,18 @@ document.getElementById('okstart').onclick = () => {
         var minutes = Math.floor( (total/1000/60) % 60 );
         var seconds = Math.floor( (total/1000) % 60 );
         
-        document.getElementById('days').innerHTML = days + ' days';
-        document.getElementById('hours').innerHTML = hours + ' hours';
-        document.getElementById('minutes').innerHTML = minutes + ' minutes ';
-        document.getElementById('seconds').innerHTML = seconds + ' seconds ';
-
         if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) { 
-           return document.getElementById('end').innerHTML = "Coming really soon. JOIN DISCORD!!"
+           document.getElementById('end').innerHTML = "Coming really soon. JOIN DISCORD!!"
+           
+           document.getElementById('days').innerHTML = '0 days';
+           document.getElementById('hours').innerHTML = '0 hours';
+           document.getElementById('minutes').innerHTML = '0 minutes ';
+           document.getElementById('seconds').innerHTML = '0 seconds ';
+        } else { 
+           document.getElementById('days').innerHTML = days + ' days';
+           document.getElementById('hours').innerHTML = hours + ' hours';
+           document.getElementById('minutes').innerHTML = minutes + ' minutes ';
+           document.getElementById('seconds').innerHTML = seconds + ' seconds ';
         }
     }, 1000)
     
