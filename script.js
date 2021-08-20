@@ -9,7 +9,7 @@ document.getElementById('okstart').onclick = () => {
     document.getElementById('start').removeAttribute('hidden');
     document.getElementById('video').play();
 
-    var countdownDate = 'August 24 2021 20:30:00 GMT+0300';
+    var countdownDate = 'August 27 2021 20:30:00 GMT+0300';
 
     setInterval(() => {
         const total = Date.parse(countdownDate) - Date.parse(new Date());
